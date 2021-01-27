@@ -1,3 +1,0 @@
-class WeeklyForecastsController < ApplicationController
-   
-end
