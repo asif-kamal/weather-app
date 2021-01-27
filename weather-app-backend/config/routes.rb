@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :days
-  resources :weekly_forecasts
+  
+  namespace :api do
+    namespace :v1 do
+      resources :weekly_forecasts do
+      resources :days
+     end
+    end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+end
 end
