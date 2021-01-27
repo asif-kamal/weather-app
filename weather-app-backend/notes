@@ -1,0 +1,9 @@
+weekly_forecast
+has_many :days
+:location - string
+
+
+
+day 
+belongs_to: weekly_forecast
+:temperature - integer, :date - datetime
