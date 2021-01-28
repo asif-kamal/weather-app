@@ -1,14 +1,11 @@
-import React from 'react';
-import env from './env';
+import React from 'react'
+import WeeklyForecastContainer from './containers/WeeklyForecastContainer'
 
-
-class App extends React.Component {
-
-  
-
-  render() {
-    
-  }
+function App(props){
+  return (
+    <WeeklyForecastContainer />
+  )
 }
+  
 
 export default App;
