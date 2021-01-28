@@ -5,5 +5,9 @@ has_many :days
 
 
 day 
-belongs_to: weekly_forecast
+belongs_to :weekly_forecast
 :temperature - integer, :date - datetime
+
+notes
+belongs_to :day
+:content - text
