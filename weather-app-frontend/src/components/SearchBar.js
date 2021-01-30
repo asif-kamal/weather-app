@@ -1,8 +1,9 @@
 import React from 'react';
 
 const SearchBar = (props) => {
+
     return (
-        <form>
+        <form onSubmit={props.getData}>
             <label>
             Get Weather by City
             <input type="text" name="city" />
