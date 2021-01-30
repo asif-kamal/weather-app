@@ -1,10 +1,11 @@
 class Api::V1::NotesController < ApplicationController
 
     def index
+        @notes = Note.all
     end
 
     def create
-        @notes = Note.all
+        @note = Note.create
     end
 
 end
