@@ -1,9 +1,14 @@
 import React from 'react';
 
-const SearchBar = (props) => {
+class SearchForm extends React.Component {
 
+   
+
+             
+
+    render(){
     return (
-        <form onSubmit={props.getData}>
+        <form onSubmit={this.handlesubmit}>
             <label>
             Get Weather by City
             <input type="text" name="city" />
@@ -13,6 +18,9 @@ const SearchBar = (props) => {
 
         </form>
     )
+    }
+
+    
 }
 
-export default SearchBar;
+export default SearchForm;
