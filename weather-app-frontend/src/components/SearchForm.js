@@ -1,17 +1,26 @@
 import React from 'react';
+import { connect } from "react-redux";
+import { getWeather } from "../redux/actionCreator"
+import { useState } from 'react';
 
-class SearchForm extends React.Component {
 
-   
+function SearchForm(props) {
 
-             
+    const [city, setCity] = useState('')
 
-    render(){
+   const handleSubmit = (e) => {
+       e.preventDefault();
+       props.getWeather(city)
+       console.log(city)
+
+   }
+
     return (
-        <form onSubmit={this.handlesubmit}>
+        <form onSubmit={handleSubmit}>
             <label>
             Get Weather by City
-            <input type="text" name="city" />
+            <input type="text" name="city" value={city} 
+            onChange={(e) => setCity(e.target.value)}/>
             
         </label>
         <input type="submit" value="Submit" />
@@ -21,6 +30,6 @@ class SearchForm extends React.Component {
     }
 
     
-}
 
-export default SearchForm;
+
+export default connect(null, {getWeather})(SearchForm);

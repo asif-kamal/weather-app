@@ -24,3 +24,4 @@ const DayForecastCard = ({ forecast }) => {
       }
       
       export default DayForecastCard;
+
