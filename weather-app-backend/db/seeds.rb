@@ -5,3 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+notes = [
+    {
+        "id": 1,
+        "content": "I felt very unhappy today looking out the window at the dreary clouds outside."
+    },
+
+    {
+        "id": 2,
+        "content": "The sun sure makes me glad to go for a walk with my friend in the morning!"
+    }
+]
+
+
+notes.each do |note| 
+    Note.create(content: note[:content])
+ end
