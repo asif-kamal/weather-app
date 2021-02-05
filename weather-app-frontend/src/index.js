@@ -7,9 +7,9 @@ import {createStore, compose, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 import {Provider} from 'react-redux'
-import {reducer} from './redux/weatherReducer'
+import {weatherReducer} from './redux/weatherReducer'
 
-const store = createStore(reducer, compose(
+const store = createStore(weatherReducer, compose(
   applyMiddleware(thunk, logger),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
