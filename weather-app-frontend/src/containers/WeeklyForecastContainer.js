@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import DayForecastCard from '../components/DayForecastCard'
 import {connect} from 'react-redux' 
-import {increment} from '../redux/actionCreator'
+import SearchForm from '../components/SearchForm';
+
 
 class WeeklyForecastContainer extends Component {
 
@@ -23,16 +24,15 @@ class WeeklyForecastContainer extends Component {
 
     
          createDayCards = (props) => {
-                return this.props.dailyForecast.map((forecast, index) => <DayForecastCard forecast={forecast} key={index} />)
+                return this.props.weeklyForecast.map((forecast, index) => <DayForecastCard forecast={forecast} key={index} />)
             }
     
 
             render(){
                 return(
                 <div className="container">
-                    <h1>Counter: {this.props.counter}</h1>
-                    <button></button>
                     <h1 className="display-3">Forecast</h1>
+                    <SearchForm />
                     <div className="row-justify-content-center">
                     {this.createDayCards()}</div>
                     </div>
@@ -41,9 +41,10 @@ class WeeklyForecastContainer extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    counter: state.counter
+    weeklyForecast: state.weeklyForecast
 })
 
 
 
-export default connect(mapStateToProps, {increment})(WeeklyForecastContainer)
+export default connect(mapStateToProps)(WeeklyForecastContainer)
+
