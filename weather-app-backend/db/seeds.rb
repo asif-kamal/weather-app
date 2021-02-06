@@ -9,16 +9,18 @@
 notes = [
     {
         "id": 1,
-        "content": "I felt very unhappy today looking out the window at the dreary clouds outside."
+        "content": "I felt very unhappy today looking out the window at the dreary clouds outside.",
+        "city": "Toledo"
     },
 
     {
         "id": 2,
-        "content": "The sun sure makes me glad to go for a walk with my friend in the morning!"
+        "content": "The sun sure makes me glad to go for a walk with my friend in the morning!",
+        "city": "New York"
     }
 ]
 
 
 notes.each do |note| 
-    Note.create!(content: note[:content])
+    Note.create!(content: note[:content], city: note[:city])
  end
