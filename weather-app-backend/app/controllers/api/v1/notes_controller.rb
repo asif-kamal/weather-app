@@ -4,7 +4,7 @@ class Api::V1::NotesController < ApplicationController
         @notes = Note.all
         render json: @notes
         end
-    end
+    
 
     def show
         @note = Note.find(params[:id])

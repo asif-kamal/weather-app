@@ -20,5 +20,5 @@ notes = [
 
 
 notes.each do |note| 
-    Note.create(content: note[:content])
+    Note.create!(content: note[:content])
  end
