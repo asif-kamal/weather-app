@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DayForecastCard from '../components/DayForecastCard'
 import {connect} from 'react-redux' 
 import SearchForm from '../components/SearchForm';
+import NotesList from '../components/NotesList';
 
 
 class WeeklyForecastContainer extends Component {
@@ -20,6 +21,7 @@ class WeeklyForecastContainer extends Component {
                 <div className="container">
                     <h1 className="display-3">Forecast</h1>
                     <SearchForm />
+                    <NotesList />
                     <div className="row-justify-content-center">
                     {this.createDayCards()}</div>
                     </div>
