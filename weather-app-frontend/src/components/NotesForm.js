@@ -19,8 +19,11 @@ const NotesForm = props => {
         }}>
             <label>Write a note about the weather</label>
             <input type="text" name="content" value={note.content} onChange={handleInputChange} ></input>
+            <label>City:</label>
             <input type="text" name="city" value={note.city} onChange={handleInputChange} ></input>
             <button>Create Note!</button>
         </form>
     )
 }
+
+export default NotesForm;
