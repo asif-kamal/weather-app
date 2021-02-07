@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import NotesForm from './NotesForm';
 
+import { Link } from "react-router-dom";
+
 
 
 const NotesList = props => {
@@ -49,6 +51,8 @@ const NotesList = props => {
          <div>
          <NotesForm addNote={addNote} initialFormState={initialFormState}/>
          </div>
+         <Link to={"/"}>Forecast Page</Link>
+        
          <div className="notes-list">
              {notes.map((note, index) => (
                  <div key={index}>
@@ -62,16 +66,3 @@ const NotesList = props => {
 
 export default NotesList;
 
-// createItem = (data) => {
-//     const config = {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json",
-//             "Accept": "application/json",
-//         },
-//     body: JSON.stringify(data),
-// };
-// return fetch(`${this.BACKEND_URL}/items`, config).then((res) => res.json());
-// };
-
-// // }
