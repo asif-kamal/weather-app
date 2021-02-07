@@ -11,7 +11,7 @@ const NotesList = props => {
     }
 
     
-    
+    const [notes, setNotes] = useState([]);
 
     const addNote = (note) => {
         const config = {
@@ -27,12 +27,16 @@ const NotesList = props => {
             }
         }),
     };
-    return fetch('/api/v1/notes', config).then((res) => res.json())
-    .then(data => setNotes([...notes, note]));
+
+    fetch('/api/v1/notes', config).then(res=>( console.log(res)))
+    .catch( error => console.log(error))
+
+    
+    setNotes([...notes, note]);
     };
     
 
-const [notes, setNotes] = useState([]);
+
 
 useEffect(() => {
     fetch ('/api/v1/notes').then((response) => response.json())
