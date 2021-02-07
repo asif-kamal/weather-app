@@ -11,6 +11,11 @@ const NotesList = props => {
     }
 
     
+    useEffect(() => {
+        fetch ('/api/v1/notes').then((response) => response.json())
+        .then(data => setNotes(data))
+    }, []);
+
     const [notes, setNotes] = useState([]);
 
     const addNote = (note) => {
@@ -38,10 +43,6 @@ const NotesList = props => {
 
 
 
-useEffect(() => {
-    fetch ('/api/v1/notes').then((response) => response.json())
-    .then(data => setNotes(data))
-})
 
  return (
      <div>

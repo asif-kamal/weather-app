@@ -18,7 +18,7 @@ class Api::V1::NotesController < ApplicationController
 
     private
 
-    def item_params
+    def note_params
         params.require(:note).permit(:content, :city)
     end
 
