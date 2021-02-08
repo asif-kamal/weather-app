@@ -3,8 +3,9 @@ import DayForecastCard from '../components/DayForecastCard'
 import {connect} from 'react-redux' 
 import SearchForm from '../components/SearchForm';
 // import NotesList from '../components/NotesList';
-import Header from '../components/Header'
-import { Link } from 'react-router-dom';
+import Header from '../components/Header';
+import Navbar from '../components/Navbar';
+
 
 
 
@@ -26,9 +27,7 @@ class WeeklyForecastContainer extends Component {
                     <Header />
                     <h1 className="display-3">Forecast</h1>
                     <SearchForm />
-                    <Link to={"/notes"}>Notes on the Weather</Link>
-                    ||  
-                    <Link to={"/about"}>About</Link>
+                    <Navbar />
                     {/* <NotesList /> */}
                     <div className="row-justify-content-center">
                     {this.createDayCards()}</div>

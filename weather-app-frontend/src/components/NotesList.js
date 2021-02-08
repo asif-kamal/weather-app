@@ -56,7 +56,7 @@ const NotesList = props => {
          <div className="notes-list">
              {notes.map((note, index) => (
                  <div key={index}>
-                     {note.content} | {note.created_at} | {note.city}
+                     <p style={{ color: 'brown' }}>{note.content} | {note.created_at} | {note.city}</p>
                      </div>
              ))}
          </div>
