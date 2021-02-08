@@ -3,16 +3,19 @@ import DayForecastCard from '../components/DayForecastCard'
 import {connect} from 'react-redux' 
 import SearchForm from '../components/SearchForm';
 // import NotesList from '../components/NotesList';
-import { Link } from "react-router-dom";
+import Header from '../components/Header'
+import { Link } from 'react-router-dom';
+
 
 
 class WeeklyForecastContainer extends Component {
 
-   
+
     
 
     
          createDayCards = (props) => {
+             
                 return this.props.weeklyForecast.map((forecast, index) => <DayForecastCard forecast={forecast} key={index} />)
             }
     
@@ -20,6 +23,7 @@ class WeeklyForecastContainer extends Component {
             render(){
                 return(
                 <div className="container">
+                    <Header />
                     <h1 className="display-3">Forecast</h1>
                     <SearchForm />
                     <Link to={"/notes"}>Notes on the Weather</Link>
