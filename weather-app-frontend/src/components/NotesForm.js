@@ -18,6 +18,7 @@ const NotesForm = props => {
             setNote(props.initialFormState)
         }}>
             <label><h1>Write a note about the weather</h1></label>
+            <label>Note:</label>
             <input type="text" name="content" value={note.content} onChange={handleInputChange} ></input>
             <label>City:</label>
             <input type="text" name="city" value={note.city} onChange={handleInputChange} ></input>
