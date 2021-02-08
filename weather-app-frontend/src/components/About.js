@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import meditation from '../meditation.jpeg'
 
 function About () {
     return(
@@ -11,6 +12,8 @@ function About () {
             to alleviate depression and anxiety.
         </p>
         <Link to={"/"}>Forecast Page</Link>
+        <br></br>
+        <img src={meditation} alt="meditation-near-lake" />;
         </div>
     )
 }
